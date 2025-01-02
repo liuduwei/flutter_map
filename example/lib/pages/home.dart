@@ -36,11 +36,9 @@ class _HomePageState extends State<HomePage> {
             options: MapOptions(
               initialCenter: const LatLng(51.5, -0.09),
               initialZoom: 5,
-              cameraConstraint: CameraConstraint.contain(
-                bounds: LatLngBounds(
-                  const LatLng(-90, -180),
-                  const LatLng(90, 180),
-                ),
+              cameraConstraint: CameraConstraint.latitudeBoundary(
+                minLatitude: -85,
+                maxLatitude: 85,
               ),
             ),
             children: [

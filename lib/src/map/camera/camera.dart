@@ -180,6 +180,7 @@ class MapCamera {
         minZoom: minZoom,
         maxZoom: maxZoom,
         center: _adjustPositionForSeamlessScrolling(center),
+        // center: center ?? this.center,
         zoom: zoom ?? this.zoom,
         rotation: rotation,
         nonRotatedSize: nonRotatedSize,
